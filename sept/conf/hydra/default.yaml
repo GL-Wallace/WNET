@@ -1,0 +1,2 @@
+run:
+  dir: sept/outputs/${output}/${now:%Y-%m-%d}/${now:%H-%M-%S}

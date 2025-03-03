@@ -1,0 +1,13 @@
+dim: 128
+historical_steps: 50
+future_steps: 60
+encoder_depth: 4
+num_heads: 8
+mlp_ratio: 4.0
+qkv_bias: false
+drop_path: 0.2
+pretrained_weights: null
+lr: 0.001
+warmup_epochs: 10
+epochs: 1
+weight_decay: 0.0001

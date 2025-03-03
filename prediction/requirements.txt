@@ -1,0 +1,23 @@
+av2==0.2.1
+imageio==2.34.2
+lmdb==1.5.1
+matplotlib==3.7.5
+numpy==1.24.1
+pandas==2.0.3
+pytorch_lightning==2.4.0
+timeout_decorator==0.5.0
+# pip install torch==2.3.1+cu118 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+torch==2.3.1+cu118  # 地平线的源可用，清华源不可用，使用上面的链接试一下
+torchmetrics==1.4.0.post0
+tqdm==4.66.5
+tensorboard
+
+# Donot install it locally
+aidi-sdk 
+
+# pre-commit tools
+pre-commit-hooks
+pre-commit
+flake8
+black
+isort

@@ -1,0 +1,36 @@
+defaults:
+  - _self_
+  - hydra: default
+  - datamodule: lmdb
+  - model: model_sept
+
+seed: 2333
+monitor: 'val_minFDE6'
+save_top_k: 1
+
+data_root: "/horizon-bucket/carizon_pnp_jfs/guowei.zhang/argoverse2/forecast-mae"
+checkpoint:
+pretrained_weights: 
+output: ${model.name}-${model.phase}
+
+# trainer
+num_workers: 0
+gpus: [0]
+sync_bn: true
+batch_size: 16
+epochs: 60
+warmup_epochs: 0
+
+# optimizer
+lr: 0.001
+weight_decay: 1e-4
+gradient_clip_val: 5
+gradient_clip_algorithm: norm
+
+limit_train_batches:
+limit_val_batches:
+limit_test_batches:
+log_model: all
+test: false
+
+wandb: disable

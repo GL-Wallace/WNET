@@ -1,0 +1,19 @@
+name: forecast-mae
+phase: sept_fine_tune
+
+target:
+  _target_: forecast_mae_prediction.src.model.trainer_sept.Trainer
+  dim: 128
+  historical_steps: 10
+  future_steps: 30
+  k: 6
+  encoder_depth: 4
+  num_heads: 8
+  mlp_ratio: 4.0
+  qkv_bias: False
+  drop_path: 0.2
+  pretrained_weights: ${pretrained_weights}
+  lr: ${lr}
+  weight_decay: ${weight_decay}
+  epochs: ${epochs}
+  warmup_epochs: ${warmup_epochs}

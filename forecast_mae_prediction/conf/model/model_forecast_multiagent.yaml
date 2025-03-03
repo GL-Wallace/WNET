@@ -1,0 +1,19 @@
+name: multiagent-baseline
+phase: forecast
+
+target:
+  _target_: forecast_mae_prediction.src.model.multiagent.trainer_forecast_ma.Trainer
+  dim: 128
+  historical_steps: 10
+  future_steps: 30
+  encoder_depth: 4
+  num_heads: 8
+  mlp_ratio: 4.0
+  qkv_bias: False
+  drop_path: 0.2
+  num_modes: 6
+  use_cls_token: false
+  lr: ${lr}
+  weight_decay: ${weight_decay}
+  epochs: ${epochs}
+  warmup_epochs: ${warmup_epochs}
